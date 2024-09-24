@@ -15,4 +15,4 @@ class Students(models.Model):
     teacher = models.ForeignKey(Teachers, on_delete=models.CASCADE) # Relasi ke tabel Teachers
 
 def __str__(self):
-    return self.name
+    return f'{self.name} - {self.nim}'

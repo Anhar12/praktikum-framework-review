@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock %} - AIS</title>
     {% load django_bootstrap5 %} {% bootstrap_css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+    <link rel="icon" href="{% static 'images/bumi datar.ico' %}"/>
 </head>
 
 <body>
@@ -31,6 +34,9 @@
     <div class="container mt-4">
         {% block content %}
         {% endblock %}
+        <div class="w-100 d-flex justify-content-center">
+            <img width="50%" class="scale-animation" src="https://assets-a1.kompasiana.com/items/album/2024/06/02/fb-img-1694647766840-665b5b9bed64153a1011d532.jpg" alt="">
+        </div>
     </div>
     {% bootstrap_javascript %}
 </body>

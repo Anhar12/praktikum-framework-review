@@ -1,0 +1,13 @@
+.scale-animation {
+    transform: scale(0);
+    animation: scaleUp 3s forwards;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(1080deg);
+    }
+}
