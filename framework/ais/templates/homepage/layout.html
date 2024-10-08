@@ -9,6 +9,9 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
     <link rel="icon" href="{% static 'images/bumi datar.ico' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.noStyle.js"></script>
 </head>
 
 <body>
@@ -23,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link {% if home %}active{% endif %}" href="{% url 'home' %}">Homepage</a>
+                        <a class="nav-link {% if section == 'home' %}active{% endif %}" href="{% url 'home' %}">Homepage</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if about %}active{% endif %}" href="{% url 'about' %}">Tentang</a>
+                        <a class="nav-link {% if section == 'about' %}active{% endif %}" href="{% url 'about' %}">Tentang</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if student %}active{% endif %}"
+                        <a class="nav-link {% if section == 'student' %}active{% endif %}"
                             href="{% url 'student_index' %}">Mahasiswa</a>
                     </li>
                 </ul>
