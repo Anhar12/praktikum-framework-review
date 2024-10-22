@@ -11,6 +11,8 @@ mysqlclient = "*"
 django-seed = "*"
 psycopg2 = "*"
 faker = "*"
+djangorestframework = "*"
+requests = "*"
 
 [dev-packages]
 
